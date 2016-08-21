@@ -3,4 +3,4 @@ pyautogui demostration
 
 ## req:
 pyautogui
-PilloW
+Pillow
