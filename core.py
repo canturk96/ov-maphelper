@@ -1,8 +1,8 @@
 #! python3
 
+##ALL THANKS TO @AlSweigart
 
-__app__ = 'overlordsBot'
-__author__ = 'Ogulcan Gurcaglar'
+__app__ = 'maphelper'
 __date__ = '2016-08-20'
 __version__ = '0.1.0'
 
@@ -10,20 +10,18 @@ import pyautogui, os, logging
 import pyhooked
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s.%(msecs)03d: %(message)s', datefmt='%H:%M:%S')
-#logging.disable(logging.DEBUG) # uncomment to block debug log messages
 
 
 def key(event):
     logging.info("pressed", repr(event.char))
 
-GAME_REGION = (500, 200, 1200, 750)  # (left, top, width, height) values coordinates of the game window
+GAME_REGION = (500, 200, 1200, 750)  # (left, top, width, height)
 
 
 def main():
     isBotRunning = None
 
     while True:
-            continue
 
         if isBotRunning:
             randomMovement()
@@ -44,7 +42,7 @@ def waterCheck():
     pos = None
 
 
-    while True:  # loop because it could be the blue or pink Play button displayed at the moment.
+    while True:
         logging.warning('[!]Searching for Water')
         pos = pyautogui.locateCenterOnScreen(im_path('01.png'), region=GAME_REGION)
         if pos is not None:
