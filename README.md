@@ -4,3 +4,6 @@ pyautogui demostration
 ## req:
 pyautogui
 Pillow
+
+
+thanks to : @AlSweigart
